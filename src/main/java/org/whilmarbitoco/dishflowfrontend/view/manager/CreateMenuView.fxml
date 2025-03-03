@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="600.0" stylesheets="@createmenu.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.manager.CreateMenuController">
+   <children>
+      <VBox fx:id="content" alignment="TOP_CENTER" prefHeight="513.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="headerText" prefHeight="63.0" prefWidth="166.0" text="Create Menu" />
+            <VBox prefHeight="502.0" prefWidth="600.0" spacing="5">
+               <children>
+                  <Label text="Menu Name" />
+                  <TextField fx:id="name" prefHeight="44.0" prefWidth="510.0" promptText="Enter Menu Name" styleClass="input" />
+                  <Label layoutX="10.0" layoutY="10.0" text="Menu Price" />
+                  <TextField fx:id="price" prefHeight="44.0" prefWidth="510.0" promptText="Enter Menu Price" styleClass="input" />
+                  <Label layoutX="10.0" layoutY="54.0" text="Menu Description" />
+                  <TextField fx:id="description" layoutX="10.0" layoutY="72.0" prefHeight="44.0" promptText="Enter Menu Description" styleClass="input" />
+                  <Label layoutX="10.0" layoutY="98.0" text="Menu Type" />
+                  <ChoiceBox fx:id="type" prefHeight="46.0" prefWidth="508.0" styleClass="choice" />
+                  <Label text="Menu Image" />
+                  <HBox alignment="TOP_CENTER" prefHeight="43.0" prefWidth="508.0" spacing="5">
+                     <children>
+                        <Button fx:id="openFile" mnemonicParsing="false" onAction="#selectImg" prefHeight="26.0" prefWidth="114.0" styleClass="file" text="file" />
+                        <Label fx:id="fileLabel" prefHeight="18.0" prefWidth="426.0" styleClass="file-label" text="No Image Selected" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20">
+                     <children>
+                        <Button fx:id="cancel" layoutX="10.0" layoutY="22.0" mnemonicParsing="false" onAction="#cancel" prefHeight="55.0" prefWidth="175.0" text="Cancel" />
+                        <Button fx:id="btn" mnemonicParsing="false" onAction="#submit" prefHeight="55.0" prefWidth="184.0" text="Submit" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

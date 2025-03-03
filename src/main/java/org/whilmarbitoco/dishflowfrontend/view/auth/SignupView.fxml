@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="688.0" prefWidth="1039.0" stylesheets="@signup.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.auth.SignupViewController">
+   <children>
+      <Pane fx:id="left" prefHeight="570.0" prefWidth="559.0">
+         <children>
+            <ImageView fitHeight="309.0" fitWidth="409.0" layoutX="73.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+               <effect>
+                  <Glow />
+               </effect>
+            </ImageView>
+            <Label fx:id="appName" layoutX="184.0" layoutY="468.0" text="DISHFLOW" />
+         </children></Pane>
+      <!-- Left Pane -->
+      <Pane fx:id="right" prefHeight="688.0" prefWidth="471.0">
+         <children>
+            <Label fx:id="TextHeader" layoutX="197.0" layoutY="37.0" styleClass="header" text="Sign Up" />
+            <Label fx:id="EmailLabel" layoutX="85.0" layoutY="211.0" styleClass="label" text="Email" />
+            <TextField fx:id="email" promptText="Enter Email" layoutX="85.0" layoutY="240.0" prefHeight="44.0" prefWidth="329.0" styleClass="input" />
+            <Label fx:id="PasswordLabel" layoutX="89.0" layoutY="409.0" styleClass="label" text="Role" />
+            <PasswordField fx:id="password" layoutX="85.0" promptText="Enter Password" layoutY="322.0" prefHeight="44.0" prefWidth="329.0" styleClass="input" />
+            <TextField fx:id="plainPassword" layoutX="85.0" layoutY="322.0" prefHeight="44.0" prefWidth="329.0" styleClass="input" visible="false" />
+            <CheckBox fx:id="ShowPassword" layoutX="88.0" layoutY="376.0" styleClass="checkbox" text="Show Password" />
+            <Button fx:id="Btn" layoutX="89.0" layoutY="514.0" onAction="#signup" prefHeight="44.0" prefWidth="329.0" styleClass="button" text="Sign Up" />
+            <Label fx:id="DHA" layoutX="141.0" layoutY="593.0" styleClass="label" text="Already have an account?" />
+            <Label fx:id="ToSignup" layoutX="327.0" layoutY="593.0" onMouseClicked="#gotoLogin" styleClass="link" text="Login" />
+            <Label fx:id="HeaderBody" layoutX="181.0" layoutY="79.0" styleClass="label" text="Create an account" />
+            <ChoiceBox fx:id="role" layoutX="89.0" layoutY="437.0" prefHeight="44.0" prefWidth="329.0" styleClass="input" />
+            <Label fx:id="PasswordLabel1" layoutX="89.0" layoutY="295.0" styleClass="label" text="Password" />
+            <TextField fx:id="firstname" promptText="Enter Firstname" layoutX="85.0" layoutY="156.0" prefHeight="44.0" prefWidth="161.0" />
+            <TextField fx:id="lastname" promptText="Enter Lastname" layoutX="265.0" layoutY="156.0" prefHeight="44.0" prefWidth="145.0" />
+            <Label fx:id="EmailLabel1" layoutX="85.0" layoutY="124.0" styleClass="label" text="Firstname" />
+            <Label fx:id="EmailLabel11" layoutX="266.0" layoutY="124.0" styleClass="label" text="Lastname" />
+         </children>
+      </Pane>
+   </children>
+</HBox>

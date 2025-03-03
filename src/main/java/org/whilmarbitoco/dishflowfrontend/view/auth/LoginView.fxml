@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="996.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.auth.LoginViewController">
+   <children>
+      <!-- Left Pane -->
+      <Pane fx:id="left" prefHeight="570.0" prefWidth="512.0">
+         <children>
+            <Label fx:id="TextHeader" layoutX="140.0" layoutY="53.0" styleClass="header" text="Welcome Back" />
+            <Label fx:id="EmailLabel" layoutX="85.0" layoutY="160.0" styleClass="label" text="Email" />
+            <TextField fx:id="email" promptText="Enter Email" layoutX="85.0" layoutY="190.0" prefHeight="44.0" prefWidth="329.0" styleClass="input" />
+            <Label fx:id="PasswordLabel" layoutX="85.0" layoutY="250.0" styleClass="label" text="Password" />
+            <PasswordField fx:id="password" promptText="Enter Password" layoutX="85.0" layoutY="280.0" prefHeight="44.0" prefWidth="329.0" styleClass="input" />
+            <TextField fx:id="plainPassword" layoutX="85.0" layoutY="280.0" prefHeight="44.0" prefWidth="329.0" styleClass="input" visible="false" />
+            <CheckBox fx:id="ShowPassword" layoutX="85.0" layoutY="332.0" styleClass="checkbox" text="Show Password" />
+            <Button fx:id="Btn" layoutX="85.0" layoutY="380.0" onAction="#login" prefHeight="44.0" prefWidth="329.0" styleClass="button" text="Login" />
+            <Label fx:id="DHA" layoutX="132.0" layoutY="459.0" styleClass="label" text="Don't have an account?" />
+            <Label fx:id="ToSignup" layoutX="304.0" layoutY="459.0" onMouseClicked="#goToSignup" styleClass="link" text="Sign Up" />
+            <Label fx:id="HeaderBody" layoutX="162.0" layoutY="95.0" text="Login to your account" />
+         </children>
+      </Pane>
+
+      <!-- Right Pane -->
+      <Pane fx:id="right" prefHeight="570.0" prefWidth="512.0">
+         <children>
+            <ImageView fitHeight="309.0" fitWidth="409.0" layoutX="54.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+               <effect>
+                  <Glow />
+               </effect></ImageView>
+            <Label fx:id="appName" layoutX="165.0" layoutY="378.0" text="DISHFLOW" textFill="WHITE">
+               <font>
+                  <Font name="Noto Sans Sogdian Regular" size="48.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</HBox>

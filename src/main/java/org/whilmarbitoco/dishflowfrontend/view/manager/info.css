@@ -1,0 +1,74 @@
+
+#container {
+    -fx-padding: 40px;
+    -fx-background-color: #F4F4F4;
+}
+
+#content {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 30px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+}
+
+#headerText{
+    -fx-font-size: 24px;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+.textLabel {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.data {
+    -fx-alignment: top-left;
+    -fx-font-size: 15px;
+    -fx-font-style: italic;
+}
+
+#btn {
+    -fx-background-color: #FDCB58;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+
+.table-view {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #FDCB58;
+    -fx-border-color: #dee2e6;
+    -fx-padding: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header {
+    -fx-background-color: #FDCB58;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+    -fx-padding: 5px;
+    -fx-border: black;
+}
+
+.table-row-cell {
+    -fx-border-color: #636363;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.dataContent {
+    -fx-padding: 15px;
+}

@@ -1,0 +1,113 @@
+#gap {
+    -fx-background-color: #FDCB58;
+}
+
+#sidebar {
+    -fx-padding: 20px;
+    -fx-spacing: 20px;
+}
+
+#btns {
+    -fx-spacing: 15px;
+}
+
+.btn {
+    -fx-background-color: #FDCB58;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-pref-height: 46px;
+    -fx-pref-width: 205px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 2, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+#headerText {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+#delete {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill:  #E50000;
+    -fx-border-color:  #E50000;
+    -fx-cursor: hand;
+    -fx-background-image: url("delete.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#create {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #3C3CE8;
+    -fx-border-color: #3C3CE8;
+    -fx-cursor: hand;
+    -fx-background-image: url("add.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#edit {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: green;
+    -fx-border-color: green;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-image: url("edit.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#info {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #FDCB58;
+    -fx-border-color: #FDCB58;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-image: url("info.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.table-view {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #FDCB58;
+    -fx-border-color: #dee2e6;
+    -fx-padding: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header {
+    -fx-background-color: #FDCB58;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+    -fx-padding: 5px;
+    -fx-border: black;
+}
+
+.table-row-cell {
+    -fx-border-color: #636363;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-background-color: #636363;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+

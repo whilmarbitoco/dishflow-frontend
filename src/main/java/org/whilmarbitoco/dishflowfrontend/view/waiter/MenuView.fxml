@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="356.0" prefWidth="319.0" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.waiter.MenuViewController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="356.0" prefWidth="315.0" spacing="10">
+         <children>
+            <Pane prefHeight="4.0" prefWidth="315.0" />
+            <!-- Food Image -->
+            <ImageView fx:id="image" fitHeight="180.0" fitWidth="330.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+               <image>
+                  <Image url="@burger.jpg" />
+               </image>
+            </ImageView>
+
+            <!-- Food Info -->
+            <HBox alignment="CENTER" prefWidth="355.0" spacing="15">
+               <children>
+                  <Label fx:id="name" prefHeight="22.0" prefWidth="173.0" styleClass="menu-title" text="Burger" />
+                  <Label fx:id="price" prefHeight="25.0" prefWidth="80.0" styleClass="menu-price" text="₱300" textAlignment="JUSTIFY" />
+               </children>
+            </HBox>
+
+            <Label fx:id="description" prefHeight="44.0" prefWidth="275.0" styleClass="menu-description" text="A delicious burger with fresh ingredients" wrapText="true" />
+
+            <Button onAction="#order" prefHeight="50.0" prefWidth="300.0" styleClass="menu-button" text="Order Now" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

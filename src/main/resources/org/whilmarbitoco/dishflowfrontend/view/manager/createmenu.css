@@ -1,0 +1,53 @@
+/* General Styling */
+.root {
+    -fx-background-color: #f4f4f4;
+    -fx-font-family: "Arial";
+}
+
+/* Header Pane */
+.header-pane {
+    -fx-background-color: #2E86C1;
+}
+
+.header-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Input Fields */
+.input-field {
+    -fx-font-size: 16px;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-border-color: #bbb;
+    -fx-background-radius: 5;
+    -fx-background-color: white;
+}
+
+/* Choice Box */
+.choice-box {
+    -fx-border-radius: 5;
+    -fx-border-color: #bbb;
+    -fx-background-radius: 5;
+    -fx-background-color: white;
+}
+
+/* File Button */
+.file-button {
+    -fx-background-color: #2E86C1;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-radius: 5;
+}
+
+.file-button:hover {
+    -fx-background-color: #1A5276;
+}
+
+/* File Label */
+.file-label {
+    -fx-text-fill: #555;
+    -fx-font-style: italic;
+}

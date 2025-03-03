@@ -1,0 +1,47 @@
+
+AnchorPane {
+    -fx-background-color: transparent;
+    -fx-border-color: #ddd;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.2, 0, 4);
+
+}
+
+.menu-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.menu-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+    -fx-alignment: center;
+}
+
+
+.menu-price {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-alignment: center-right;
+}
+
+.menu-button {
+    -fx-background-color: #FDCB58;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+}
+
+.menu-button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #E5B946;
+}
+
+.image-view {
+    -fx-fit-width: 330px;
+    -fx-fit-height: 180px;
+    -fx-preserve-ratio: false;
+}
