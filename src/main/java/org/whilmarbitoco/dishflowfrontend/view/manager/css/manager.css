@@ -1,0 +1,92 @@
+#gap {
+    -fx-background-color: #FDCB58;
+}
+
+#btns {
+    -fx-spacing: 15px;
+}
+
+#sidebar {
+    -fx-background-color: #FFFFFF;
+}
+
+#btns Button {
+    -fx-background-radius: 0px;
+    -fx-border-radius: 0px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-pref-height: 46px;
+    -fx-pref-width: 205px;
+
+}
+
+#btns Button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 2, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.inactive {
+        -fx-background-color: #FFFFFF;
+        -fx-text-fill: #000000;
+}
+
+.active {
+    -fx-background-color: #FDCB58;
+    -fx-text-fill: #FFFFFF;
+}
+
+#headerText {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+
+
+#create {
+    -fx-background-color: #FDCB58;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FDCB58;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+#addIngredient {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FDCB58;
+    -fx-border-color: #FDCB58;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+
+#scrollPane {
+    -fx-background-color: transparent;
+}
+
+
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+#tableContainer {
+    -fx-padding: 15px;
+}
+
+#table {
+    -fx-border-color: #FDCB58;
+    -fx-border-width: 5px;
+}
+
+#theader {
+    -fx-background-color: #FDCB58;;
+    -fx-font-size: 15px;
+    -fx-padding: 15px;
+    -fx-font-weight: bold;
+}

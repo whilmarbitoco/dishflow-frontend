@@ -49,7 +49,7 @@ public class LoginViewModel {
 
         switch (role) {
             case "Manager":
-                ViewHandler.openView("manager/ManagerView");
+                ViewHandler.openView("manager/ManagerMenuView");
                 break;
 
             case "Waiter":

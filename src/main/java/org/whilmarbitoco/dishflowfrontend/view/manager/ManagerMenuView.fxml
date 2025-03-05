@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="795.0" prefWidth="1306.0" stylesheets="@css/manager.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.manager.ManagerMenuController">
+   <children>
+      <VBox fx:id="sidebar" alignment="TOP_CENTER" prefHeight="795.0" prefWidth="225.0">
+         <children>
+            <Pane prefHeight="29.0" prefWidth="245.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image></ImageView>
+            <VBox fx:id="btns" alignment="CENTER_RIGHT" prefHeight="277.0" prefWidth="245.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="163.0" styleClass="active" text="Menu" />
+                  <Button layoutX="29.0" layoutY="10.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="163.0" styleClass="inactive" text="Ingredient" />
+                  <Button layoutX="29.0" layoutY="61.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="163.0" styleClass="inactive" text="Table" />
+                  <Button layoutX="29.0" layoutY="112.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="163.0" styleClass="inactive" text="Employee" />
+               </children>
+            </VBox>
+         </children></VBox>
+      <Pane fx:id="gap" prefHeight="795.0" prefWidth="13.0" />
+      <VBox fx:id="container" prefHeight="795.0" prefWidth="1077.0">
+         <children>
+            <HBox fx:id="header" alignment="BOTTOM_CENTER" prefHeight="79.0" prefWidth="1074.0">
+               <children>
+                  <Label fx:id="headerText" prefHeight="36.0" prefWidth="272.0" text="Menu Management" />
+                  <Pane prefHeight="79.0" prefWidth="650.0" />
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="79.0" prefWidth="119.0" spacing="5">
+                     <children>
+                        <Button fx:id="create" mnemonicParsing="false" onAction="#create" prefHeight="41.0" prefWidth="118.0" text="Add New" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox fx:id="tableContainer" prefHeight="702.0" prefWidth="1074.0">
+               <children>
+                  <VBox fx:id="table" prefHeight="706.0" prefWidth="1074.0">
+                     <children>
+                        <HBox fx:id="theader" alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="1044.0" spacing="5" styleClass="thead">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="114.0" text="Image" />
+                              <Label layoutX="10.0" layoutY="22.0" prefHeight="21.0" prefWidth="153.0" text="Name" />
+                              <Label layoutX="43.0" layoutY="22.0" prefHeight="21.0" prefWidth="124.0" text="Price" />
+                              <Label layoutX="76.0" layoutY="22.0" prefHeight="21.0" prefWidth="154.0" text="Description" />
+                              <Label layoutX="182.0" layoutY="22.0" prefHeight="21.0" prefWidth="143.0" text="Available" />
+                              <Label layoutX="227.0" layoutY="22.0" prefHeight="21.0" prefWidth="159.0" text="Type" />
+                              <Label layoutX="287.0" layoutY="22.0" prefHeight="21.0" prefWidth="161.0" text="Action" textAlignment="RIGHT" />
+                           </children></HBox>
+                        <ScrollPane fx:id="scrollPane" fitToHeight="false" prefHeight="649.0" prefWidth="1044.0">
+                           <content>
+                              <GridPane fx:id="tcontent" prefHeight="20.0" prefWidth="8.0" vgap="4">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children></VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

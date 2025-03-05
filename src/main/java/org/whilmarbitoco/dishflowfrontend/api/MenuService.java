@@ -3,12 +3,15 @@ package org.whilmarbitoco.dishflowfrontend.api;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.*;
 import org.whilmarbitoco.dishflowfrontend.core.dto.ErrorDTO;
+import org.whilmarbitoco.dishflowfrontend.core.dto.IngredientDTO;
 import org.whilmarbitoco.dishflowfrontend.core.dto.MenuDTO;
 import org.whilmarbitoco.dishflowfrontend.core.dto.ResultDTO;
+import org.whilmarbitoco.dishflowfrontend.model.Ingredient;
 import org.whilmarbitoco.dishflowfrontend.model.Menu;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 
 public class MenuService {
@@ -68,6 +71,32 @@ public class MenuService {
 
             ErrorDTO res = mapper.readValue(response.body().string(), ErrorDTO.class);
             throw new RuntimeException(res.error);
+        }
+    }
+
+    public List<Ingredient> getIngredients(int id) throws Exception {
+
+        Request request = new Request.Builder()
+                .url(HttpService.BASE_URL + "/ingredient?mid=" + id)
+                .get()
+                .build();
+
+
+        try (Response res = client.newCall(request).execute()) {
+            if (!res.isSuccessful()) {
+                throw new RuntimeException("Unable to retrieve ingredient");
+            }
+
+            String body = res.body().string();
+
+            List<IngredientDTO> list = mapper.readValue(body, mapper.getTypeFactory().constructCollectionType(List.class, IngredientDTO.class));
+            return list.stream()
+                    .map(i -> {
+                        return new Ingredient(i.id, i.name, i.quantity,i.unit, LocalDate.parse(i.created_at), LocalDate.parse(i.updated_at));
+                    }).toList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 }

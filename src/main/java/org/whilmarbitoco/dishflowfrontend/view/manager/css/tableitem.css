@@ -1,0 +1,36 @@
+.root {
+    -fx-border-color: #737373;
+}
+
+.text {
+    -fx-alignment: center;
+    -fx-font-size: 13px;
+    -fx-text-fill: #737373;
+}
+
+.btn {
+-fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;
+    -fx-background-size: cover;
+    -fx-cursor: hand;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#view {
+    -fx-background-image: url("../img/view.png");
+}
+
+#delete {
+    -fx-background-image: url("../img/delete.png");
+}
+
+#edit {
+    -fx-background-image: url("../img/edit.png");
+}
+
+#ingredient {
+-fx-background-image: url("../img/item.png");
+}

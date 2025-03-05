@@ -1,7 +1,5 @@
 package org.whilmarbitoco.dishflowfrontend.api;
 
-import org.whilmarbitoco.dishflowfrontend.core.ServiceResult;
-
 public interface Authentication {
 
     void login(String email, String password) throws Exception;

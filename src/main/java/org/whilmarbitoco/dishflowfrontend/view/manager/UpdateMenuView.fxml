@@ -3,11 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="600.0" stylesheets="@css/createmenu.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.manager.CreateMenuController">
+<VBox fx:id="container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="600.0" stylesheets="@css/createmenu.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.manager.UpdateMenuController">
    <children>
-      <VBox fx:id="content" alignment="TOP_CENTER" prefHeight="513.0" prefWidth="600.0">
+      <VBox fx:id="content" alignment="TOP_CENTER" prefHeight="607.0" prefWidth="520.0">
          <children>
-            <Label fx:id="headerText" prefHeight="63.0" prefWidth="166.0" text="Create Menu" />
+            <Label fx:id="headerText" prefHeight="63.0" prefWidth="166.0" text="Update Menu" />
             <VBox prefHeight="502.0" prefWidth="600.0" spacing="5">
                <children>
                   <Label text="Menu Name" />
@@ -25,6 +25,7 @@
                         <Label fx:id="fileLabel" prefHeight="18.0" prefWidth="426.0" styleClass="file-label" text="No Image Selected" />
                      </children>
                   </HBox>
+                  <Separator prefWidth="200.0" />
                   <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20">
                      <children>
                         <Button fx:id="cancel" layoutX="10.0" layoutY="22.0" mnemonicParsing="false" onAction="#cancel" prefHeight="42.0" prefWidth="158.0" text="Cancel" />

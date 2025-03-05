@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import org.whilmarbitoco.dishflowfrontend.api.MenuService;
 import org.whilmarbitoco.dishflowfrontend.model.Menu;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ManagerViewModel {
@@ -15,27 +16,8 @@ public class ManagerViewModel {
 
     private final BooleanProperty error = new SimpleBooleanProperty();
     private final StringProperty errorMsg = new SimpleStringProperty();
-    private final ObservableList<Menu> menus = FXCollections.observableArrayList();
     private final ObjectProperty<Menu> selected = new SimpleObjectProperty<>();
 
-
-    public void fetchMenu() {
-        new Thread(() -> {
-            try {
-                List<Menu> list = menuService.all();
-                Platform.runLater(() -> {
-                    menus.clear();
-                    menus.addAll(list);
-                });
-
-            } catch (Exception e) {
-                Platform.runLater(() -> {
-                    errorMsg.setValue(e.getMessage());
-                    error.setValue(true);
-                });
-            }
-        }).start();
-    }
 
     public void delete() {
         if (selected.get() == null) {
@@ -47,7 +29,6 @@ public class ManagerViewModel {
             try {
                 menuService.delete(selected.get().getId());
                 Platform.runLater(() -> {
-                    fetchMenu();
                     selected.setValue(null);
                 });
             } catch (Exception e) {
@@ -67,8 +48,8 @@ public class ManagerViewModel {
         return errorMsg;
     }
 
-    public ObservableList<Menu> getMenus() {
-        return menus;
+    public List<Menu> getMenus() throws Exception {
+        return menuService.all();
     }
 
     public ObjectProperty<Menu> selectedProperty() {

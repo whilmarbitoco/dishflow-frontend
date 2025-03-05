@@ -1,15 +1,11 @@
 package org.whilmarbitoco.dishflowfrontend.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.whilmarbitoco.dishflowfrontend.core.ServiceResult;
 import org.whilmarbitoco.dishflowfrontend.core.dto.Auth;
 import org.whilmarbitoco.dishflowfrontend.core.auth.Session;
 import org.whilmarbitoco.dishflowfrontend.core.dto.Token;
-import javafx.application.Platform;
 import org.whilmarbitoco.dishflowfrontend.core.dto.VerifyEmailDTO;
 import org.whilmarbitoco.dishflowfrontend.model.Employee;
-
-import java.util.concurrent.CompletableFuture;
 
 public class AuthService implements Authentication {
 

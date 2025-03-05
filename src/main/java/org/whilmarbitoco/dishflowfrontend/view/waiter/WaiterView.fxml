@@ -5,10 +5,11 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="773.0" prefWidth="1313.0" style="-fx-border-radius: 20px;" stylesheets="@waiter.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.waiter.WaiterViewController">
+<HBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="773.0" prefWidth="1275.0" style="-fx-border-radius: 20px;" stylesheets="@waiter.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.waiter.WaiterViewController">
    <children>
-      <VBox fx:id="sidebar" alignment="TOP_CENTER" prefHeight="675.0" prefWidth="241.0">
+      <VBox fx:id="sidebar" alignment="TOP_CENTER" prefHeight="773.0" prefWidth="191.0">
          <children>
+            <Pane prefHeight="13.0" prefWidth="224.0" />
             <ImageView fitHeight="146.0" fitWidth="232.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logo.png" />
@@ -17,16 +18,16 @@
                   <Glow />
                </effect>
             </ImageView>
-            <VBox fx:id="sidebarMenu" alignment="CENTER" prefHeight="300.0" prefWidth="219.0">
+            <VBox fx:id="sidebarMenu" alignment="CENTER_RIGHT" prefHeight="300.0" prefWidth="273.0">
                <children>
-                  <Button fx:id="takeBTN" mnemonicParsing="false" prefHeight="46.0" prefWidth="205.0" text="Take Order" />
-                  <Button fx:id="statusBTN" mnemonicParsing="false" prefHeight="46.0" prefWidth="205.0" text="Order Status" />
-                  <Button fx:id="historyBTN" mnemonicParsing="false" prefHeight="46.0" prefWidth="205.0" text="Order History" />
-                  <Button fx:id="settingsBTN" mnemonicParsing="false" prefHeight="46.0" prefWidth="205.0" text="Settings" />
+                  <Button fx:id="takeBTN" mnemonicParsing="false" prefHeight="46.0" prefWidth="252.0" styleClass="active" text="MENU" />
+                  <Button fx:id="statusBTN" mnemonicParsing="false" prefHeight="46.0" prefWidth="205.0" styleClass="inactive" text="ORDER" />
+                  <Button fx:id="historyBTN" mnemonicParsing="false" prefHeight="46.0" prefWidth="205.0" styleClass="inactive" text="HISTORY" />
+                  <Button fx:id="settingsBTN" mnemonicParsing="false" prefHeight="46.0" prefWidth="205.0" styleClass="inactive" text="SETTINGS" />
                </children>
             </VBox>
          </children></VBox>
-      <Pane fx:id="gap" prefHeight="773.0" prefWidth="12.0" />
+      <Pane fx:id="gap" prefHeight="773.0" prefWidth="11.0" />
       <VBox prefHeight="773.0" prefWidth="1042.0">
          <children>
             <HBox fx:id="navbar" alignment="CENTER_LEFT" prefHeight="97.0" prefWidth="987.0">
@@ -50,7 +51,7 @@
                         </GridPane>
                      </content>
                   </ScrollPane>
-      
+
                </children>
             </HBox>
          </children>

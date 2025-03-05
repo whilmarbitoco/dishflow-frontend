@@ -4,21 +4,21 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="603.0" stylesheets="@info.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.manager.InfoViewController">
+<VBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="603.0" stylesheets="@css/info.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.manager.InfoViewController">
    <children>
       <VBox fx:id="content" alignment="TOP_CENTER" prefHeight="838.0" prefWidth="705.0" spacing="15">
          <children>
-            <Label fx:id="headerText" prefHeight="101.0" prefWidth="241.0" text="Menu Information" textAlignment="CENTER" />
-            <HBox prefHeight="510.0" prefWidth="565.0">
+            <Label fx:id="headerText" prefHeight="45.0" prefWidth="241.0" text="Menu Information" textAlignment="CENTER" />
+            <HBox prefHeight="471.0" prefWidth="463.0">
                <children>
                   <VBox prefHeight="565.0" prefWidth="404.0">
                      <children>
-                        <ImageView fx:id="image" fitHeight="207.0" fitWidth="253.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
+                        <ImageView fx:id="image" fitHeight="152.0" fitWidth="253.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
                            <image>
-                              <Image url="@burger.jpg" />
+                              <Image url="@img/burger.jpg" />
                            </image>
                         </ImageView>
-                        <VBox prefHeight="411.0" prefWidth="334.0" spacing="5" styleClass="dataContent">
+                        <VBox prefHeight="280.0" prefWidth="327.0" spacing="5" styleClass="dataContent">
                            <children>
                               <Label styleClass="textLabel" text="Menu:" />
                               <Label fx:id="menuName" prefHeight="26.0" prefWidth="294.0" styleClass="data" text="Classic Cheese Burger" />
@@ -27,19 +27,16 @@
                               <Label layoutX="10.0" layoutY="70.0" styleClass="textLabel" text="Available:" />
                               <Label fx:id="available" layoutX="10.0" layoutY="104.0" prefHeight="25.0" prefWidth="247.0" styleClass="data" text="true" />
                               <Label layoutX="10.0" layoutY="46.0" styleClass="textLabel" text="Description:" />
-                              <Label fx:id="description" layoutX="10.0" layoutY="64.0" prefHeight="74.0" prefWidth="253.0" styleClass="data" text="Classic Cheese Burger" wrapText="true" />
+                              <Label fx:id="description" layoutX="10.0" layoutY="64.0" prefHeight="74.0" prefWidth="297.0" styleClass="data" text="Classic Cheese Burger" wrapText="true" />
                            </children>
                         </VBox>
                      </children></VBox>
-                  <TableView fx:id="table" prefHeight="832.0" prefWidth="302.0">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="Name" />
-                      <TableColumn prefWidth="75.0" text="Quantity" />
-                    </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                  </TableView>
+                  <VBox alignment="TOP_CENTER" prefHeight="435.0" prefWidth="203.0">
+                     <children>
+                        <Label styleClass="textLabel" text="Ingredients" />
+                        <ListView fx:id="ingredients" prefHeight="436.0" prefWidth="131.0" />
+                     </children>
+                  </VBox>
                </children>
             </HBox>
             <Separator prefWidth="200.0" />

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="1305.0" stylesheets="@css/addingredient.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.manager.AddIngredientController">
+   <children>
+      <VBox fx:id="content" prefHeight="691.0" prefWidth="1225.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="519.0" prefWidth="1225.0" spacing="8">
+               <children>
+                  <VBox prefHeight="593.0" prefWidth="566.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="540.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="144.0" styleClass="header" text="Ingredient List" />
+                              <Pane prefHeight="59.0" prefWidth="294.0" />
+                              <Button mnemonicParsing="false" onAction="#addAction" prefHeight="32.0" prefWidth="92.0" styleClass="add-btn" text="Add" />
+                           </children>
+                        </HBox>
+                        <TableView fx:id="table" prefHeight="462.0" prefWidth="540.0">
+                          <columns>
+                            <TableColumn fx:id="tid" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="tname" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="tunit" prefWidth="75.0" text="Unit" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <VBox prefHeight="593.0" prefWidth="629.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="603.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="282.0" styleClass="header" text="Ingredients to Add" />
+                              <Pane prefHeight="50.0" prefWidth="345.0" />
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" styleClass="plus-btn" text="+" />
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="minus-btn" text="-" onAction="#minus" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="addTable" prefHeight="463.0" prefWidth="603.0">
+                          <columns>
+                            <TableColumn fx:id="ATId" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="ATName" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="ATUnit" prefWidth="75.0" text="Unit" />
+                              <TableColumn fx:id="ATQty" prefWidth="75.0" text="Required Quantity" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10">
+               <children>
+                  <Button fx:id="cancel" onAction="#cancel" mnemonicParsing="false" text="Cancel" />
+                  <Button fx:id="submit" layoutX="1115.0" onAction="#submit" layoutY="41.0" mnemonicParsing="false" text="Submit" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

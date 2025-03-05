@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="1030.0" spacing="10" styleClass="root" stylesheets="@css/tableitem.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.whilmarbitoco.dishflowfrontend.view.manager.MTableItemController">
+   <children>
+      <ImageView fx:id="image" fitHeight="87.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/burger.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="name" prefHeight="80.0" prefWidth="139.0" styleClass="text" text="Classic Cheese Burger" />
+      <Label fx:id="price" layoutX="123.0" layoutY="10.0" prefHeight="71.0" prefWidth="100.0" styleClass="text" text="250.0" />
+      <Label fx:id="description" layoutX="272.0" layoutY="10.0" prefHeight="71.0" prefWidth="159.0" styleClass="text" text="A super delicious burger with fresh ingredients and well cooked steak." wrapText="true" />
+      <Label fx:id="available" layoutX="382.0" layoutY="10.0" prefHeight="71.0" prefWidth="119.0" styleClass="text" text="False" wrapText="true" />
+      <Label fx:id="type" layoutX="551.0" layoutY="10.0" prefHeight="71.0" prefWidth="144.0" styleClass="text" text="Dessert" wrapText="true" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10">
+         <children>
+            <Button fx:id="ingredient" layoutX="137.0" layoutY="31.0" mnemonicParsing="false" onAction="#ingredientAction" prefHeight="28.0" prefWidth="29.0" styleClass="btn" />
+            <Button fx:id="view" mnemonicParsing="false" onAction="#viewAction" prefHeight="28.0" prefWidth="33.0" styleClass="btn" />
+            <Button fx:id="edit" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editAction" prefHeight="28.0" prefWidth="29.0" styleClass="btn" />
+            <Button fx:id="delete" layoutX="70.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="28.0" prefWidth="29.0" styleClass="btn" />
+         </children>
+      </HBox>
+   </children>
+</HBox>
